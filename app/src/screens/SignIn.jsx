@@ -11,21 +11,25 @@ const SignIn = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
-    password: "",
+    secret: "",
   });
   const redirect = () => {
-    navigate("/Register");
+    navigate("/home");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await backend_cnx.sign_in(formData);
+    const json_response = await response.json();
+    localStorage.setItem("user", json_response["user"]);
+    localStorage.setItem("name", json_response["name"]);
+    localStorage.setItem("email", json_response["email"]);
     if (response?.status === 200) {
       toast.success("Logged In", {
         autoClose: 1000,
       });
       setTimeout(() => {
-        navigate("/tech_maps");
+        navigate("/techs_map");
       }, 1000);
     } else {
       toast.error("Wrong Credentials", {

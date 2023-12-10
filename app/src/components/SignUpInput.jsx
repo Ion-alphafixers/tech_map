@@ -12,7 +12,7 @@ const SignUpInput = ({ placeholder, setFormData, formData, signIn }) => {
   const handleInputChange = (e) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [placeholder_id]: e.target.value.toString(),
+      [placeholder_id.toLowerCase() !== 'password' ? placeholder_id : "secret"]: e.target.value.toString(),
     }));
   };
   const handleContainerClick = (e) => {
