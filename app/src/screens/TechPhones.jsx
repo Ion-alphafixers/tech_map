@@ -93,6 +93,7 @@ function TechPhones() {
       ...prevMap,
       [techId]: false,
     }));
+    
     const q = `UPDATE techs SET tech_name = '${techNums[techId]}' WHERE tech_phone = '${techId}';`;
     console.log(q)
     const changeTechName = async () => {
