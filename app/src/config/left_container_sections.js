@@ -1,4 +1,4 @@
-import { AiTwotoneHome, AiFillThunderbolt } from "react-icons/ai";
+import { AiTwotoneHome, AiFillThunderbolt, AiFillPhone } from "react-icons/ai";
 import { ImExit } from "react-icons/im";
 import { SiBookstack } from "react-icons/si";
 
@@ -7,7 +7,11 @@ let sections = {
     link: "/techs_map",
     icon: <SiBookstack />,
   },
-  
+  "Tech Numbers": {
+    link: "/techs_phone",
+    icon: <AiFillPhone />,
+  },
+
   Logout: {
     link: "/",
     icon: <ImExit />,

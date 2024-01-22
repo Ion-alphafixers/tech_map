@@ -5,6 +5,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TechMaps from "./screens/TechMaps";
 import Home from "./components/Home";
+import TechPhones from "./screens/TechPhones";
+
 function App() {
   return (
     <>
@@ -14,6 +16,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/" element={<SignIn />} />
             <Route path="/techs_map" element={<TechMaps />} />
+            <Route path="/techs_phone" element={<TechPhones />} />
           </Routes>
         </div>
       </Router>
